@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'faq/index'
+
+  get 'pricing/index'
+
+  get 'gallery/index'
+
+  get 'contact/index'
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
