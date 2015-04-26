@@ -28,7 +28,6 @@
 
     nav {
       posision: relative;
-      /*height: 70px;*/
       font-size: 1.5rem;
       line-height: 70px;
       text-align: center;
@@ -37,7 +36,6 @@
     nav a {
       text-align: center;
       color: rgb(64, 45, 28);
-      /*-webkit-text-stroke: 1px transparent;*/
     }
 
     .left i {
@@ -56,9 +54,7 @@
     }
 
     nav li a {
-      width: 100%;
-      height: 100%;
-      /*display: block;*/
+      width: 69%;
     }
 
     nav i {
@@ -77,8 +73,10 @@
     }
 
     .right {
-      display: none;
-      margin: -60px 0;
+      margin: 0;
+      left: 0 !important;
+      top: 53px !important;
+      display: none !important;
       background: rgba(255, 255, 255, 0.7);
     }
 
@@ -104,17 +102,18 @@
       padding: 0.5rem !important;
     }
     
-    .name-box {
-      left: 25% !important;
-    }
-    
     .what-else .name-box {
-      left: 14.5% !important;
+      top: 50%;
     }
     
-    .blue-background,
+    .blue-background {
+      height: 140vh !important;
+    }
     .brown-background {
-      height: auto !important;
+      height: 200vh !important;
+    }
+    .brown-background:nth-of-type(2) {
+      height: 75vh !important;
     }
 }
 
@@ -164,7 +163,6 @@
 
     nav {
       posision: relative;
-      /*height: 70px;*/
       font-size: 1.5rem;
       line-height: 70px;
       text-align: center;
@@ -173,7 +171,6 @@
     nav a {
       text-align: center;
       color: rgb(64, 45, 28);
-      /*-webkit-text-stroke: 1px transparent;*/
     }
 
     .left i {
@@ -192,9 +189,7 @@
     }
 
     nav li a {
-      width: 100%;
-      height: 100%;
-      /*display: block;*/
+      width: 69%;
     }
 
     nav i {
@@ -213,8 +208,10 @@
     }
 
     .right {
-      display: none;
-      margin: -60px 0;
+      margin: 0;
+      left: 0 !important;
+      top: 53px !important;
+      display: none !important;
       background: rgba(255, 255, 255, 0.7);
     }
 
@@ -240,35 +237,29 @@
       padding: 0.5rem !important;
     }
     
-    .name-box {
-      left: 25% !important;
-    }
-    
     .what-else .name-box {
-      left: 14.5% !important;
+      left: 50% !important;
     }
     
-    .blue-background,
-    .brown-background {
-      height: auto !important;
+    .blue-background {
+      height: 140vh !important;
     }
-}
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
+    .brown-background {
+      height: 200vh !important;
+    }
+    .brown-background:nth-of-type(2) {
+      height: 75vh !important;
+    }
+    
+    /* Footer */
+    
+    .footer-left,
+    .footer-right,
+    .footer-middle {
+      width: 100%;
+    }
+    
+    /* Footer END */
 }
 
 /* ----------- iPhone 6 ----------- */
@@ -300,7 +291,6 @@
 
     nav {
       posision: relative;
-      /*height: 70px;*/
       font-size: 1.5rem;
       line-height: 70px;
       text-align: center;
@@ -309,7 +299,6 @@
     nav a {
       text-align: center;
       color: rgb(64, 45, 28);
-      /*-webkit-text-stroke: 1px transparent;*/
     }
 
     .left i {
@@ -328,9 +317,7 @@
     }
 
     nav li a {
-      width: 100%;
-      height: 100%;
-      /*display: block;*/
+      width: 69%;
     }
 
     nav i {
@@ -349,8 +336,10 @@
     }
 
     .right {
-      display: none;
-      margin: -60px 0;
+      margin: 0;
+      left: 0 !important;
+      top: 53px !important;
+      display: none !important;
       background: rgba(255, 255, 255, 0.7);
     }
 
@@ -376,36 +365,33 @@
       padding: 0.5rem !important;
     }
     
-    .name-box {
-      left: 25% !important;
+    #home {
+      margin-top: 23rem;
     }
     
     .what-else .name-box {
-      left: 14.5% !important;
+      left: 50% !important;
     }
     
-    .blue-background,
-    .brown-background {
-      height: auto !important;
+    .blue-background {
+      height: 140vh !important;
     }
-}
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
+    .brown-background {
+      height: 200vh !important;
+    }
+    .brown-background:nth-of-type(2) {
+      width: 140vw;
+    }
+    
+    /* Footer */
+    
+    .footer-left,
+    .footer-right,
+    .footer-middle {
+      width: 100%;
+    }
+    
+    /* Footer END */
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -446,7 +432,6 @@
     nav a {
       text-align: center;
       color: rgb(64, 45, 28);
-      /*-webkit-text-stroke: 1px transparent;*/
     }
 
     .left i {
@@ -467,7 +452,6 @@
     nav li a {
       width: 100%;
       height: 100%;
-      /*display: block;*/
     }
 
     nav i {
@@ -487,7 +471,7 @@
 
     .right {
       display: none;
-      margin: -60px 0;
+      margin: 45px 0;
       background: rgba(255, 255, 255, 0.7);
     }
 
@@ -513,34 +497,27 @@
       padding: 0.5rem !important;
     }
     
-    .name-box {
-      left: 25% !important;
-    }
-    
     .what-else .name-box {
-      left: 14.5% !important;
+      left: 50% !important;
     }
     
-    .blue-background,
-    .brown-background {
-      height: auto !important;
+    .blue-background {
+      height: 140vh !important;
     }
-}
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 414px)
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 414px)
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) {
-
+    .brown-background {
+      height: 200vh !important;
+    }
+    .brown-background:nth-of-type(2) {
+      height: 75vh !important;
+    }
+    
+    /* Footer */
+    
+    .footer-left,
+    .footer-right,
+    .footer-middle {
+      width: 100%;
+    }
+    
+    /* Footer END */
 }

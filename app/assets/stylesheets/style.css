@@ -1,15 +1,19 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 @import url("//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css");
 @import url("//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css");
-@import "../css/reset.css";
-@import "../css/color.css";
-@import "../css/gallery.css";
-@import "../css/pricing.css";
-@import "../css/style-guide.css";
-@import "../css/media-queries.css";
-/*@import "../partials/_layout.css";
-@import "../partials/_mixins.css";
-@import "../partials_variables.css";*/
+/*
+@import "bourbon";
+@import "neat";
+*/
+@import "reset.css";
+@import "color.css";
+@import "gallery.css";
+@import "pricing.css";
+@import "style-guide.css";
+@import "media-queries.css";
+@import "partials/_layout.css";
+@import "partials/_mixins.css";
+@import "partials_variables.css";
 
 /* --------------------------------
 Primary style
@@ -41,8 +45,7 @@ a {
 }
 
 .current {
-  text-decoration: underline;
-  border-top: 1px solid rgb(64, 45, 28);
+  border-top: 4px solid rgb(64, 45, 28);
 }
 .current:after {
   content: '';
@@ -150,10 +153,12 @@ nav {
   height: 70px;
   font-size: 1.5rem;
   line-height: 70px;
+  position: relative;
   text-align: center;
 }
 
 nav a {
+  width: 100%;
   display: block;
   height: inherit;
   text-align: center;
@@ -167,10 +172,14 @@ nav a.current:hover {
   text-decoration: underline;
 }
 
-nav li {
-  width: 24%;
+nav ul.right li {
+  margin: -2.75px;
+  width: 14.7%;
   list-style: none;
   display: inline-block;
+  /* Flex Box */
+  -webkit-flex: 0 1 auto; /* Safari */
+  flex:         0 1 auto;
 }
 
 nav i {
@@ -186,22 +195,28 @@ nav li:hover {
   display: block !important;
 }
 
-.left,
-.right {
-  width: calc(98vw/2);
+.left {
+  z-index: 99;
+  width: 140px;
+  height: 72px;
 }
 
-.left {
-  float: left;
-  text-align: left;
+.right {
+  top: 2px;
+  left: 140px;
+  position: absolute;
+  width: calc(100vw - 140px);
+  /* Flex Box */
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+  -webkit-flex-wrap: wrap-reverse; /* Safari */
+  flex-wrap:         wrap-reverse;
 }
 
 .left i {
   display: none;
-}
-
-.right {
-  float: right;
 }
 
 .logo {
@@ -228,12 +243,14 @@ i.icon {
 Main Content
 -------------------------------- */
 .about,
+.inner,
 .name-box,
 .what-else-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -272,8 +289,8 @@ h1 {
 .main-content {
   width: 100vw;
   height: 100vh;
+  margin-bottom: 0;
   position: relative;
-  margin-bottom: -18px;
 }
 
 .main-content p {
@@ -377,6 +394,7 @@ Ads
 
 .ads {
   width: 100vw;
+  margin: -17px 0;
   padding: 1rem 0;
   position: relative;
 }
@@ -401,7 +419,6 @@ Footer
 
 footer {
   margin: 0;
-  padding: 2em;
   width: 100vw;
   position: relative;
   background-color: #333;
@@ -413,22 +430,88 @@ footer::after {
   clear: both;
 }
 
+.footer-left {
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+.footer-left .wrap {
+  float: left;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  
+  /* Flex Box */
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+  -webkit-flex-wrap: wrap-reverse; /* Safari */
+  flex-wrap:         wrap-reverse;
+}
+
+.footer-middle {
+  float: left;
+  height: 150px;
+  width: calc(100vw - 600px);
+}
+.footer-middle p {
+  color: #fff;
+  line-height: 9.5;
+  text-align: center;
+}
+
+.footer-right {
+  float: right;
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  position: relative;
+}
+.footer-right p {
+  font-weight: 500;
+}
+.footer-right li {
+  margin: 0;
+  float: left;
+  display: block;
+  line-height: 1;
+  padding: 0 5px 5px 0; 
+}
+.footer-right li a {
+  color: rgb(214, 192, 42);
+  border-bottom: 1px dotted rgb(214, 192, 42);
+}
+.footer-right li a:vistited {
+  border-bottom: none;
+}
+.footer-right li a:hover{
+  border-bottom: 1px dotted rgba(214, 192, 42, 0.5);
+}
+.footer-right li a:hover,
+.footer-right li a:visited {
+  color: rgba(214, 192, 42, 0.5);
+}
+
 footer a,
 footer a:hover {
   line-height: 1.5;
+  text-decoration: none;
   color: rgb(242, 242, 242);
 }
 
 footer a:hover {
-  text-decoration: underline;
-  border-top: 1px solid rgb(242, 242, 242);
+  border-top: 0;
+  text-decoration: none;
 }
 footer a:hover:after {
   content: '';
   text-decoration: underline;
 }
 
-footer ul {
+footer ul.wrap {
+  width: 150px;
+  height: 100px;
   display: inline-block;
 }
 
@@ -440,34 +523,70 @@ footer ul li {
 
 footer ul li img {
   float: left;
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   margin: 0;
   padding: 0;
 }
 
-i.fa-twitter,
-i.fa-facebook,
-i.fa-google-plus-square {
-  width: 25px;
-  height: 25px;
-  z-index: 5;
+.aboutme,
+.twitter,
+.facebook,
+.treehouse,
+.google-plus {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
   font-size: 25px;
   position: absolute;
 }
-i.fa-twitter {
-  top: 30px;
-  left: 5px;
-  color: #4099ff;
+.aboutme {
+  top: 0;
+  left: 0;
+  background-image: url(about_me.png);
+  background-size: cover;
+}
+.twitter {
+  top: 0;
+  left: 100px;
+  background-color: #4099ff;
+}
+.facebook {
+  top: 0;
+  left: 50px;
+  background-color: #3b5998;
+}
+.google-plus {
+  left: 0;
+  top: 50px;
+  background-color: transparent;
+}
+.treehouse {
+  top: 50px;
+  left: 79px;
+  width: 55px;
+  height: 55px;
+  background-image: url(treehouse.png);
+  background-size: cover;
+}
+
+.treehouse,
+i.fa-twitter,
+i.fa-google-plus-square {
+  z-index: 1;
+  margin: auto;
+  font-size: 55px;
+  margin: 0 0 5px -36px;
 }
 i.fa-facebook {
-  top: 2px;
-  left: 8px;
-  color: #3b5998;
+  margin: -35px;
+  font-size: 50px;
 }
-i.fa-google-plus-square {
-  top: 61px;
-  left: 5px;
+
+i.fa-twitter {
+  color: #fff;
+}
+i.fa-google-plus-square {  
   color: #d34836;
 }
 
@@ -584,8 +703,8 @@ main-nav ul.is-visible {
 
 .london1,
 .fixed-bg.bg-1 {
-  background: linear-gradient(180deg, rgba(214, 192, 42, 0.33), transparent 90%),
-              #d6c02a url("../img/london1.png") no-repeat center fixed;
+  background: linear-gradient(180deg, rgba(214, 192, 42, 0.33), transparent 98%),
+              url(london1.png) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -597,7 +716,7 @@ main-nav ul.is-visible {
 .london2,
 .fixed-bg.bg-3 {
   background: linear-gradient(180deg, rgba(64, 45, 28, 0.5), transparent 90%),
-              url("../img/london2.png") no-repeat center fixed;
+              url(london2.png) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -609,7 +728,7 @@ main-nav ul.is-visible {
 .london3,
 .fixed-bg.bg-4 {
   background: linear-gradient(180deg, rgba(66, 70, 104, 0.5), transparent 90%),
-              url("../img/london3.png") no-repeat center fixed;
+              url(london3.png) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
