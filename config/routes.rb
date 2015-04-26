@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'faq' => 'faq#view'
+
+  get 'index' => 'home'
+
+  get 'index' => 'learn'
+
+  get 'index' => 'code'
+
+  get 'index' => 'play'
 
   get 'pricing' => 'pricing'
 
@@ -7,7 +14,5 @@ Rails.application.routes.draw do
 
   get 'contact' => 'contact'
 
-  get 'index'
-
-  match 'index' => 'index', :as => :root
+  root 'home#index'
 end
